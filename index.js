@@ -91,7 +91,7 @@ app.post("/bfhl", (req, res) => {
   }
 });
 
-app.get("/", (res) => res.send("bfhl-api is running"));
+app.get("/", (res) => res.status(200).json({ message: "bfhl-api is running" }));
 
 const PORT = 3000;
 app.listen(PORT, () => {
